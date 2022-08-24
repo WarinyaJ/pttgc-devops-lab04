@@ -49,6 +49,22 @@ In this exercise we will replace the `Repository Secrets` that we used in the pr
 *NOTE: In this lab we will cover only two types of secrets, the Environment Secrets will be in the separate topic*
 
 
+## Exercise 3 - Protect workflow by using CODEOWNERS
+You can protect directory `.github/workflows` by using feature `CODEOWNERS`. Any changes for any files in `.github/workflows` will need to be reviewed and approved by the person/team that specified in the `CODEOWNERS` files
+
+- Use the same repository
+- Create `CODEOWNERS` file at the root level of the repository
+```
+\.github\ @<your-github-user>
+#For example
+\.github\ @puizeabix
+```
+- Commit and push code, and open the any file inside `.github/workflows`, you will see the small icon indicated that this file is protected.
+
+![CODEOWNERS](./assets/codeowners.PNG)
+
+
+
 ### Naming your secrets
 - Secret names can only contain alphanumeric characters ([a-z], [A-Z], [0-9]) or underscores (_). Spaces are not allowed.
 
