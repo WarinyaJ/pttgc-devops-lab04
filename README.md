@@ -47,3 +47,21 @@ In this exercise we will replace the `Repository Secrets` that we used in the pr
 
 
 *NOTE: In this lab we will cover only two types of secrets, the Environment Secrets will be in the separate topic*
+
+
+### Naming your secrets
+- Secret names can only contain alphanumeric characters ([a-z], [A-Z], [0-9]) or underscores (_). Spaces are not allowed.
+
+- Secret names must not start with the GITHUB_ prefix.
+
+- Secret names must not start with a number.
+
+- Secret names are not case-sensitive.
+
+- Secret names must be unique at the level they are created at.
+
+For example, a secret created at the environment level must have a unique name in that environment, a secret created at the repository level must have a unique name in that repository, and a secret created at the organization level must have a unique name at that level.
+
+If a secret with the same name exists at multiple levels, the secret at the lowest level takes precedence. For example, if an organization-level secret has the same name as a repository-level secret, then the repository-level secret takes precedence. Similarly, if an organization, repository, and environment all have a secret with the same name, the environment-level secret takes precedence.
+
+*Reference [https://docs.github.com/en/actions/security-guides/encrypted-secrets#naming-your-secrets](https://docs.github.com/en/actions/security-guides/encrypted-secrets#naming-your-secrets)
